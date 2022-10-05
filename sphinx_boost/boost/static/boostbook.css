@@ -824,7 +824,10 @@ Sphinx Styles Adjustments
         padding-left: 0;
     }
 
-    li.toctree-l2
+    li.toctree-l2,
+    li.toctree-l3,
+    li.toctree-l4,
+    li.toctree-l5
     { 
         padding-left: 3em; 
     }
@@ -887,3 +890,22 @@ Sphinx Styles Adjustments
         background-color: #F0F0F0;
         border: 1px solid #DCDCDC;
     }
+
+/* 2022 fix */
+
+ol.simple ol p,
+ol.simple ul p,
+ul.simple ol p,
+ul.simple ul p {
+    margin-top: 0;
+}
+
+ol.simple > li:not(:first-child) > p,
+ul.simple > li:not(:first-child) > p {
+    margin-top: 0;
+}
+
+ol.simple p,
+ul.simple p {
+    margin-bottom: 0;
+}
